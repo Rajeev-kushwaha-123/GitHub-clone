@@ -12,7 +12,7 @@ class SocketService {
       return this.socket;
     }
 
-    this.socket = io('http://localhost:3002', {
+    this.socket = io('http://65.0.138.0:3002', {
       cors: {
         origin: "*",
         methods: ["GET", "POST"],

@@ -29,7 +29,7 @@ const CreateIssue = ({ repositoryId, onIssueCreated }) => {
     setError(null);
 
     try {
-      const response = await fetch(`http://localhost:3002/issue/create/${repositoryId}`, {
+      const response = await fetch(`http://65.0.138.0:3002/issue/create/${repositoryId}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

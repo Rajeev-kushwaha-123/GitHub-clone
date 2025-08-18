@@ -32,7 +32,7 @@ const CreateRepository = ({ onRepositoryCreated }) => {
     setError(null);
 
     try {
-      const response = await fetch('http://localhost:3002/repo/create', {
+      const response = await fetch('http://65.0.138.0:3002/repo/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

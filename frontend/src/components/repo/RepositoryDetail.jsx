@@ -42,7 +42,7 @@ const RepositoryDetail = () => {
   // eslint-disable-next-line no-unused-vars
   const handleUpdateDescription = async (newDescription) => {
     try {
-      const response = await fetch(`http://localhost:3002/repo/update/${id}`, {
+      const response = await fetch(`http://65.0.138.0:3002/repo/update/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

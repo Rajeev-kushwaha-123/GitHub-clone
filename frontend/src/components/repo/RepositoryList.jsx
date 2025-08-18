@@ -15,7 +15,7 @@ const RepositoryList = () => {
   const fetchRepositories = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:3002/repo/all');
+      const response = await fetch('http://65.0.138.0:3002/repo/all');
       if (!response.ok) {
         throw new Error('Failed to fetch repositories');
       }
@@ -34,7 +34,7 @@ const RepositoryList = () => {
     }
 
     try {
-      const response = await fetch(`http://localhost:3002/repo/delete/${repoId}`, {
+      const response = await fetch(`http://65.0.138.0:3002/repo/delete/${repoId}`, {
         method: 'DELETE',
       });
 
@@ -51,7 +51,7 @@ const RepositoryList = () => {
 
   const handleToggleVisibility = async (repoId) => {
     try {
-      const response = await fetch(`http://localhost:3002/repo/toggle/${repoId}`, {
+      const response = await fetch(`http://65.0.138.0:3002/repo/toggle/${repoId}`, {
         method: 'PATCH',
       });
 
