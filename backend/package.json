@@ -1,0 +1,32 @@
+{
+  "name": "github-clone-backend",
+  "version": "1.0.0",
+  "description": "Backend for GitHub Clone - A full-stack repository management system",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "keywords": ["github", "clone", "repository", "git", "nodejs", "express", "mongodb"],
+  "author": "rajeev kushwaha",
+  "license": "ISC",
+  "packageManager": "pnpm@10.12.1",
+  "dependencies": {
+    "aws-sdk": "^2.1692.0",
+    "bcryptjs": "^3.0.2",
+    "body-parser": "^2.2.0",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.1",
+    "express": "^5.1.0",
+    "http": "0.0.1-security",
+    "jsonwebtoken": "^9.0.2",
+    "mongodb": "^6.18.0",
+    "mongoose": "^8.17.0",
+    "socket.io": "^4.8.1",
+    "uuid": "^11.1.0",
+    "yargs": "^18.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.0"
+  }
+}

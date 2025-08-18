@@ -1,0 +1,402 @@
+.notifications-container {
+  padding: 2rem 0;
+  background-color: #f6f8fa;
+  min-height: 100vh;
+}
+
+/* Header */
+.notifications-header {
+  background: white;
+  border-bottom: 1px solid #e1e4e8;
+  padding: 2rem 0;
+  margin-bottom: 2rem;
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.notifications-title {
+  margin: 0;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #24292e;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.unread-badge {
+  background: #d73a49;
+  color: white;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.875rem;
+  font-weight: 600;
+}
+
+.header-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+/* Filters */
+.filters-section {
+  background: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.filter-button {
+  background: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 6px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 0.875rem;
+  color: #586069;
+}
+
+.filter-button:hover {
+  border-color: #0366d6;
+  background-color: #f6f8fa;
+}
+
+.filter-button.active {
+  border-color: #0366d6;
+  background-color: #0366d6;
+  color: white;
+}
+
+/* Notifications List */
+.notifications-list {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.notification-item {
+  background: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  gap: 1rem;
+  transition: all 0.2s ease;
+  position: relative;
+}
+
+.notification-item:hover {
+  border-color: #0366d6;
+  box-shadow: 0 2px 8px rgba(3, 102, 214, 0.1);
+}
+
+.notification-item.unread {
+  border-left: 4px solid #0366d6;
+  background-color: #f8f9fa;
+}
+
+.notification-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f6f8fa;
+  border-radius: 8px;
+}
+
+.notification-icon i {
+  font-size: 1.5rem;
+}
+
+.notification-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.notification-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.notification-title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #24292e;
+  line-height: 1.4;
+}
+
+.notification-time {
+  color: #586069;
+  font-size: 0.875rem;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+.notification-description {
+  color: #586069;
+  margin: 0 0 1rem 0;
+  line-height: 1.5;
+}
+
+.notification-meta {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.repository-name {
+  color: #0366d6;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+}
+
+.repository-name:hover {
+  text-decoration: underline;
+}
+
+.notification-type {
+  background: #f6f8fa;
+  color: #586069;
+  padding: 0.25rem 0.75rem;
+  border-radius: 12px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+.notification-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.mark-read-button {
+  background: #28a745;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.mark-read-button:hover {
+  background-color: #22863a;
+}
+
+.mark-read-button i {
+  font-size: 0.875rem;
+}
+
+/* Empty State */
+.empty-state {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  color: #d1d5da;
+  margin-bottom: 1.5rem;
+}
+
+.empty-state h3 {
+  margin: 0 0 1rem 0;
+  color: #24292e;
+  font-size: 1.5rem;
+}
+
+.empty-state p {
+  margin: 0;
+  color: #586069;
+  font-size: 1.125rem;
+}
+
+/* Load More */
+.load-more-section {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.load-more-button {
+  padding: 0.75rem 2rem;
+  font-size: 1rem;
+}
+
+/* Settings Section */
+.settings-section {
+  max-width: 1200px;
+  margin: 3rem auto 0;
+  padding: 0 1rem;
+}
+
+.settings-card {
+  background: white;
+  border: 1px solid #e1e4e8;
+  border-radius: 8px;
+  padding: 2rem;
+  text-align: center;
+}
+
+.settings-card h3 {
+  margin: 0 0 0.5rem 0;
+  color: #24292e;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+.settings-card p {
+  margin: 0 0 2rem 0;
+  color: #586069;
+}
+
+.settings-options {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  max-width: 400px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.setting-option {
+  text-align: left;
+}
+
+.setting-option .form-check {
+  margin: 0;
+  padding: 0;
+}
+
+.setting-option .form-check-input {
+  margin-right: 0.75rem;
+}
+
+.setting-option .form-check-label {
+  color: #24292e;
+  font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .notifications-container {
+    padding: 1rem 0;
+  }
+  
+  .notifications-header {
+    padding: 1.5rem 0;
+  }
+  
+  .header-content {
+    flex-direction: column;
+    gap: 1.5rem;
+    text-align: center;
+  }
+  
+  .notifications-title {
+    font-size: 2rem;
+    justify-content: center;
+  }
+  
+  .filter-buttons {
+    justify-content: center;
+  }
+  
+  .notification-item {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .notification-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+  
+  .notification-time {
+    margin-left: 0;
+  }
+  
+  .notification-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+  }
+  
+  .notification-actions {
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+  }
+  
+  .settings-options {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .notifications-title {
+    font-size: 1.75rem;
+  }
+  
+  .notification-item {
+    padding: 1rem;
+  }
+  
+  .filters-section {
+    padding: 1rem;
+  }
+  
+  .filter-buttons {
+    gap: 0.5rem;
+  }
+  
+  .filter-button {
+    padding: 0.5rem 0.75rem;
+    font-size: 0.8rem;
+  }
+  
+  .settings-card {
+    padding: 1.5rem 1rem;
+  }
+}
