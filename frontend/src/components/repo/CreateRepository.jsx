@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './repo.css';
+import { API_BASE_URL } from '../../services/config';
 
 const CreateRepository = ({ onRepositoryCreated }) => {
   const [formData, setFormData] = useState({
@@ -32,7 +33,7 @@ const CreateRepository = ({ onRepositoryCreated }) => {
     setError(null);
 
     try {
-      const response = await fetch('http://13.204.45.96:3002/repo/create', {
+      const response = await fetch(`${API_BASE_URL}/repo/create`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

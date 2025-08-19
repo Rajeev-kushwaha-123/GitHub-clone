@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { API_BASE_URL } from '../../services/config';
 import { useParams } from 'react-router-dom';
 import IssueList from '../issue/IssueList';
 import CreateIssue from '../issue/CreateIssue';
@@ -19,7 +20,7 @@ const RepositoryDetail = () => {
   const fetchRepository = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`http://13.204.45.96:3002/repo/${id}`);
+      const response = await fetch(`${API_BASE_URL}/repo/${id}`);
       if (!response.ok) {
         throw new Error('Failed to fetch repository');
       }
@@ -42,7 +43,7 @@ const RepositoryDetail = () => {
   // eslint-disable-next-line no-unused-vars
   const handleUpdateDescription = async (newDescription) => {
     try {
-      const response = await fetch(`http://13.204.45.96:3002/repo/update/${id}`, {
+      const response = await fetch(`${API_BASE_URL}/repo/update/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',

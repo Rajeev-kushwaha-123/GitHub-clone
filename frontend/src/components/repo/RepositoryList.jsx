@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import './repo.css';
+import { API_BASE_URL } from '../../services/config';
 
 const RepositoryList = () => {
   const [repositories, setRepositories] = useState([]);
@@ -15,7 +16,7 @@ const RepositoryList = () => {
   const fetchRepositories = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://13.204.45.96:3002/repo/all');
+      const response = await fetch(`${API_BASE_URL}/repo/all`);
       if (!response.ok) {
         throw new Error('Failed to fetch repositories');
       }
@@ -34,7 +35,7 @@ const RepositoryList = () => {
     }
 
     try {
-      const response = await fetch(`http://13.204.45.96:3002/repo/delete/${repoId}`, {
+      const response = await fetch(`${API_BASE_URL}/repo/delete/${repoId}`, {
         method: 'DELETE',
       });
 
@@ -51,7 +52,7 @@ const RepositoryList = () => {
 
   const handleToggleVisibility = async (repoId) => {
     try {
-      const response = await fetch(`http://13.204.45.96:3002/repo/toggle/${repoId}`, {
+      const response = await fetch(`${API_BASE_URL}/repo/toggle/${repoId}`, {
         method: 'PATCH',
       });
 
