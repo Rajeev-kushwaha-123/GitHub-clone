@@ -19,7 +19,7 @@ const RepositoryDetail = () => {
   const fetchRepository = async () => {
     try {
       setLoading(true);
-      const response = await fetch(`http://localhost:3002/repo/${id}`);
+      const response = await fetch(`http://13.204.45.96:3002/repo/${id}`);
       if (!response.ok) {
         throw new Error('Failed to fetch repository');
       }
@@ -42,7 +42,7 @@ const RepositoryDetail = () => {
   // eslint-disable-next-line no-unused-vars
   const handleUpdateDescription = async (newDescription) => {
     try {
-      const response = await fetch(`http://65.0.138.0:3002/repo/update/${id}`, {
+      const response = await fetch(`http://13.204.45.96:3002/repo/update/${id}`, {
         method: 'PUT',
         headers: {
           'Content-Type': 'application/json',
